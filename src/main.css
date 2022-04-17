@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;700;900&display=swap');
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
 	--font-family: 'Barlow', sans-serif;
 	--font-200: 200;
@@ -8,24 +18,32 @@
 	--font-500: 500;
 	--font-700: 700;
 	--font-900: 900;
+	--font-size: 16px;
 	--color-primary: #f1d00a;
 	--color-secondary: #21325e;
 	--color-dark: #0f0e0e;
 	--color-light: #fff9f9;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+::-webkit-scrollbar {
+	background: rgba(137, 194, 243, 0.3);
+	width: 6px;
+	height: 4px;
 }
-
-html {
-	font-size: 62.5%;
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		125deg,
+		var(--color-secondary),
+		var(--color-dark)
+	);
+	border-radius: 5px;
 }
 
 body {
-	font-size: 1.6rem;
+	font-size: var(--font-size);
 	font-family: var(--font-family);
 	font-weight: var(--font-400);
 	background: var(--color-light);
@@ -41,6 +59,16 @@ ul {
 	list-style: none;
 }
 
+img {
+	max-width: 100%;
+}
+
+button {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
 .main {
 	position: relative;
 	width: 100%;
@@ -50,6 +78,22 @@ ul {
 
 .content {
 	width: 90%;
-	max-width: 120rem;
+	max-width: 1200px;
 	margin: 0 auto;
+	font-size: var(--font-size);
+	padding: 40px 0;
+}
+
+.title {
+	font-size: 24px;
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	margin-bottom: 24px;
+	color: var(--color-secondary);
+}
+
+.product-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 24px;
 }

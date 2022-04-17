@@ -7,4 +7,5 @@ export interface Route {
 	path: string
 	Component: JSXComponent | LazyExoticComponent<JSXComponent>
 	name: string
+	icon?: JSXComponent
 }

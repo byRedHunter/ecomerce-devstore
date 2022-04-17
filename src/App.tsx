@@ -2,26 +2,29 @@ import { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Footer, Header, Loader } from './common'
 import { routes } from './routers/router'
+import ProductDetail from './pages/Detail'
 
 const App = () => {
 	return (
-		<Suspense fallback={<Loader />}>
-			<BrowserRouter>
-				<section className='main'>
-					<Header />
+		<BrowserRouter>
+			<section className='main'>
+				<Header />
 
+				<Suspense fallback={<Loader />}>
 					<main className='content'>
 						<Routes>
 							{routes.map(({ path, Component }) => (
 								<Route key={path} path={path} element={<Component />} />
 							))}
+
+							<Route path='product/:id' element={<ProductDetail />} />
 						</Routes>
 					</main>
+				</Suspense>
 
-					<Footer />
-				</section>
-			</BrowserRouter>
-		</Suspense>
+				<Footer />
+			</section>
+		</BrowserRouter>
 	)
 }
 
