@@ -7,6 +7,7 @@
 	overflow: hidden;
 	transform-origin: center;
 	position: relative;
+	align-self: baseline;
 }
 
 .productTitle {
@@ -17,6 +18,16 @@
 	color: var(--color-dark);
 	text-transform: capitalize;
 	height: 48px;
+}
+
+.productImage {
+	display: grid;
+	place-items: center;
+}
+.productImage img {
+	width: 100%;
+	height: 320px;
+	object-fit: cover;
 }
 
 .productInfo {
@@ -58,34 +69,4 @@
 	font-weight: var(--font-700);
 	color: var(--color-primary);
 	letter-spacing: 1px;
-}
-
-@media screen and (min-width: 800px) {
-	.productTitle {
-		text-align: center;
-	}
-
-	.productActionHeart {
-		background: var(--color-dark);
-		position: initial;
-		top: initial;
-		right: initial;
-	}
-}
-
-@media screen and (min-width: 1000px) {
-	.productTitle {
-		transform: translateX(-110%);
-		transition: all 0.3s;
-	}
-
-	.productInfo {
-		transform: translateX(110%);
-		transition: all 0.3s;
-	}
-
-	.product:hover .productTitle,
-	.product:hover .productInfo {
-		transform: translateX(0);
-	}
 }

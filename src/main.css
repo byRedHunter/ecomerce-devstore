@@ -22,6 +22,7 @@ html {
 	--color-primary: #f1d00a;
 	--color-secondary: #21325e;
 	--color-dark: #0f0e0e;
+	--color-gray: #676767;
 	--color-light: #fff9f9;
 }
 
@@ -78,7 +79,7 @@ button {
 
 .content {
 	width: 90%;
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: 0 auto;
 	font-size: var(--font-size);
 	padding: 40px 0;
@@ -95,5 +96,5 @@ button {
 .product-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 24px;
+	gap: 40px;
 }

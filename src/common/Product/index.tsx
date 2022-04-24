@@ -3,16 +3,15 @@ import Heart from '../../icons/Heart'
 import Eye from '../../icons/Eye'
 import Cart from '../../icons/Cart'
 
-const Product = () => {
+const Product = ({
+	img = 'https://http2.mlstatic.com/D_NQ_NP_984136-MLM43965816361_112020-O.webp',
+}) => {
 	return (
 		<article className={Style.product}>
 			<h3 className={Style.productTitle}>titulo del producto</h3>
 
 			<figure className={Style.productImage}>
-				<img
-					src='https://http2.mlstatic.com/D_NQ_NP_984136-MLM43965816361_112020-O.webp'
-					alt='product tile'
-				/>
+				<img src={img} alt='product tile' />
 			</figure>
 
 			<div className={Style.productInfo}>

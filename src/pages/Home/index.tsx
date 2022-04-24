@@ -1,15 +1,17 @@
-import { Product } from '../../common'
+import Filter from './components/Filter'
+import Products from './components/Products'
+import Search from './components/Search'
+
+import './components/style.css'
 
 const index = () => {
 	return (
 		<section className=''>
-			<h3 className='title'>buscador</h3>
-			<h3 className='title'>filtro</h3>
-			<div className='product-container'>
-				<Product />
-				<Product />
-				<Product />
-			</div>
+			<Search />
+
+			<Filter />
+
+			<Products />
 		</section>
 	)
 }

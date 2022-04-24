@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { Footer, Header, Loader } from './common'
+import { Header, Loader } from './common'
 import { routes } from './routers/router'
 import ProductDetail from './pages/Detail'
 
@@ -21,8 +21,6 @@ const App = () => {
 						</Routes>
 					</main>
 				</Suspense>
-
-				<Footer />
 			</section>
 		</BrowserRouter>
 	)
